@@ -3,4 +3,4 @@
 
 Control de gastos.
 
-<a href="https://salvacam.github.io/controlGastos" target="_blank">Web</a>
+<a href="https://salvacam.github.io/controlGastos/" target="_blank">Web</a>
