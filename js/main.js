@@ -164,8 +164,8 @@ var app = {
 	},
 
 	showData: function(){
+		app.principalDiv.innerHTML = "";
 		if (app.listShopping != null && app.listShopping.length > 0) {
-			app.principalDiv.innerHTML = "";
 
 			let array =new Array();
 			let month = "";
@@ -277,7 +277,7 @@ var app = {
             var request = store.put(item);
 
             request.onerror = function (e) {
-                console.log("No se ha editado / recuperado el item");
+                console.log("No se ha editado el item");
             }
 
             request.onsuccess = function (e) {
@@ -296,11 +296,11 @@ var app = {
             var request = store.delete(item.id);
 
             request.onerror = function (e) {
-                console.log("No se ha editado / recuperado el item");
+                console.log("No se ha borrado el item");
             }
 
             request.onsuccess = function (e) {
-            	console.log("Se ha editado con exito");
+            	console.log("Se ha borrado con exito");
             }
         }
     },
@@ -321,8 +321,6 @@ var app = {
 		app.newBillButton.addEventListener('click', (event) => {
 			app.saveBill();
 		});
-
-		app.closeModalButton.addEventListener('click', app.closeModal);  
 
 		if ('serviceWorker' in navigator) {
       		navigator.serviceWorker
