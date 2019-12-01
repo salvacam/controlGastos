@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Control Gastos</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5" />
+
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+  	<meta name="theme-color" content="#CCC">
+
+	<link rel="icon" href="img/icon.png">
+
+  	<style type="text/css">
+		html{width:100%;height:100%;}
+		body{font-family:Helvetica;font-size:16px;height:100%;background:0;border-radius:0;font:16px sans-serif;margin:0}
+		header{display:flex;justify-content:space-around;background-color:#ccc;border-bottom:1px solid #666}
+		header h3{margin:0;font-size:20px;font-weight:700;padding:0;padding-top:5px}
+		header h3 img{margin-right:15px}
+		.container{margin:0 auto;margin-top:5px;width:auto;height:calc(100% - 65px);text-align:center;max-width:720px;}
+		.btn{	border-radius:6px;border:0;background-color:#00F;color:#FFF;cursor:pointer;display:inline-block;margin:2px 0;text-decoration:none;outline:0;padding:10px;font-size:14px}
+		.titleFeed{width:98%;height:30px;align-items:center;background:#5180C5;color:#FFF;padding:0px 2px;margin-left:1%;margin-right:1%;}
+		.hide{display:none !important}
+		.flex{display:flex;justify-content:center;margin-top:20px;margin-bottom:20px;}
+		.col{display: inline-flex;width: 85%;padding: 0px 2px;margin-left: 1%;margin-right: 1%; margin-bottom: 10px;cursor: pointer;}
+		.col.nopointer{cursor:initial;}
+		.c9{width:75%;}.c3{width:25%;}.c6{width:50%;}.c2{width:15%}.c1{display: inline-flex;cursor:pointer;justify-content: center;background-color: #999;border-radius: 50%;width: 25px;height: 25px;font-size: 20px;}
+		.c1.novisible{visibility: hidden;}
+		.buttonNew {width: 50px;height: 50px;border-radius: 50%;background-color: #666;color: #fff;font-size: 40px;cursor: pointer;text-align: center;bottom: 20px;
+		}
+		.addBill{position: fixed;right: 20px;}
+		.formBill{width: 98%;align-items: center;padding: 0px 2px;margin-left: 1%;margin-right: 1%;display: flex;flex-direction: column;align-items: center;margin-top: 20px;height: 200px;line-height: 20px;}
+		.formBill > div:not(.buttonForm){margin-top: 10px;}
+		.buttonForm {display: flex;justify-content: space-between;width: 50%;margin-top: 50px;}
+		.newBill{right: 20px;font-size: 20px;line-height: 45px;align-self: flex-end;}
+		.clearBill{left: 20px;font-size: 30px;line-height: 50px;align-self: flex-start;}
+  	</style>
+
+    <link rel="manifest" href="./manifest.json">
+
+    <meta name="description" content="Control de gastos.">
+    <meta name="keywords" content="gastos, expense, control de gastos, ingresos, pwa" />
+
+    <meta name="author" content="Salvador Camacho" /> 
+
+</head>
+
+<body>
+
+	<header>
+		<h3>
+			<img src="img/icon.png" alt="icon" height="24">Control de gastos
+		</h3>
+	</header>
+
+    <div class="container principal" id="principalDiv">
+	</div>
+
+	<div id="addBill" class="addBill buttonNew">+</div>
+
+	<div id="formBillDiv" class="formBill hide">
+		<div>Concepto:</div>
+		<div><input type="text" name="concept" id="conceptInput" size="30"></div>
+		<div>Precio:</div>
+		<div><input type="number" name="price" id="priceInput" size="7"></div>
+		<div class="buttonForm">
+			<div id="clearBill" class="clearBill buttonNew">X</div>
+			<div id="newBill" class="newBill buttonNew">OK</div>
+		</div>
+	</div>
+    
+	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+
+</body>
+</html>
